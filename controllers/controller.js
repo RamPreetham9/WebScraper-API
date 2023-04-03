@@ -11,7 +11,13 @@ const Scrape = async (req, res) => {
                 const $ = cheerio.load(html);
                 const links = $('a').map((i, link) => $(link).attr('href')).get();
                 // console.log(links);
-                res.status(200).json({'data':links});
+                const l=[];
+                for(var i=0; i<links.length; i++) {
+                    if(links[i].startsWith('https')) {
+                        l.push(links[i]);
+                    }
+                }
+                res.status(200).json({'data':l});
             })
             .catch(error => {
                 console.log(error);
@@ -37,8 +43,15 @@ const Scrape = async (req, res) => {
                   images.push(src);
                 }
               });
+
+              const l=[];
+              for(var i=0; i<images.length; i++) {
+                  if(images[i].startsWith('https')) {
+                      l.push(links[i]);
+                  }
+              }
         
-              res.status(200).json({'data':images});
+              res.status(200).json({'data':l});
             });
           }).on('error', (err) => {
             console.error(err);
