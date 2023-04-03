@@ -17,6 +17,7 @@
     "express": "^4.18.2",
     "http-proxy-middleware": "^2.0.6",
     "https": "^1.0.0",
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "tesseract.js": "^4.0.3"
   }
 }
