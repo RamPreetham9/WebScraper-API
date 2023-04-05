@@ -1,18 +1,18 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 const https=require("https");
-const Tesseract=require("tesseract.js")
+// const Tesseract=require("tesseract.js")
 
-const OCR = async (req,res) =>{
-    const { imageUrl } = req.body;
-    try {
-      const { data: { text } } = await Tesseract.recognize(imageUrl);
-      res.status(200).json({ text });
-      console.log(text);
-    } catch (error) {
-      res.status(500).json({ error: error.message });
-    }
-}
+// const OCR = async (req,res) =>{
+//     const { imageUrl } = req.body;
+//     try {
+//       const { data: { text } } = await Tesseract.recognize(imageUrl);
+//       res.status(200).json({ text });
+//       console.log(text);
+//     } catch (error) {
+//       res.status(500).json({ error: error.message });
+//     }
+// }
 
 const Scrape = async (req, res) => {
     const {myurl,tag} = req.body;
@@ -100,4 +100,4 @@ const Scrape = async (req, res) => {
              
 }
 
-module.exports = {Scrape,OCR};
+module.exports = {Scrape};
