@@ -1,9 +1,13 @@
 const express = require('express');
-const { Scrape } = require('../controllers/controller.js');
+const { ScrapeImg, ScrapeHead, ScrapeLink } = require('../controllers/controller.js');
 
 const router = express.Router();
 
-router.post("/",Scrape);
+router.post("/img", ScrapeImg);
+
+router.post("/head", ScrapeHead);
+
+router.post("/links", ScrapeLink);
 
 // router.post("/ocr",OCR);
 
