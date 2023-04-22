@@ -27,7 +27,7 @@ const ScrapeLink = async (req, res) => {
       // console.log(links);
       const l = [];
       for (var i = 0; i < links.length; i++) {
-        if (links[i].startsWith('https')) {
+        if (links[i].startsWith('http')) {
           l.push(links[i]);
         }
       }
@@ -62,14 +62,14 @@ const ScrapeImg = async (req, res) => {
         }
       });
 
-      const l = [];
-      for (var i = 0; i < images.length; i++) {
-        if (images[i].startsWith('https')) {
-          l.push(images[i]);
-        }
-      }
-
-      res.status(200).json({ 'data': l });
+      // const l = [];
+      // for (var i = 0; i < images.length; i++) {
+      //   if (images[i].startsWith('http')) {
+      //     l.push(images[i]);
+      //   }
+      // }
+      console.log(images);
+      res.status(200).json({ 'data': images });
     });
   }).on('error', (err) => {
     console.error(err);
