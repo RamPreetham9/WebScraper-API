@@ -68,7 +68,6 @@ const ScrapeImg = async (req, res) => {
       //     l.push(images[i]);
       //   }
       // }
-      console.log(images);
       res.status(200).json({ 'data': images });
     });
   }).on('error', (err) => {
