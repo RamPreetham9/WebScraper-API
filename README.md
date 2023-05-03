@@ -3,7 +3,7 @@
 Clone the server's code repository using Git. This will create a local copy of the server's code on your machine.
 bash
 
-`git clone <repository_url>`
+`git clone https://github.com/RamPreetham9/WebScraper-API.git`
 
 Navigate to the cloned repository's directory using the terminal or command prompt.
 
