@@ -20,3 +20,5 @@ Start the server using the following command:
 `nodemon server.js`
 
 This will start the server and output any relevant messages to the console.
+
+Then we can work on the server using Postman on `localhost:\\4000`
